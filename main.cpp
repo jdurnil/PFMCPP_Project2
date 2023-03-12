@@ -200,7 +200,7 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    auto result = AddNumbers(1, 2);
+    auto result = addNumbers(1, 2);
     
     //2)
     performTask('B');
@@ -215,7 +215,7 @@ int main()
     //7)
     catchWave(10);
     //8)
-    auto apacolypseComing = isApacoplypseComing(8);
+    auto apacolypseComing = isApocaplypseComing(8);
     //9)
     auto passed = didPassTest();
     //10)
