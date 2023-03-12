@@ -15,6 +15,13 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of the 6 major primitive types available in C++  here:
+
+integer
+character
+float
+double
+boolean
+wide character
  
  
  
@@ -64,10 +71,25 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+    int numStudents = 10;
+    int cupcakes = 8;
+    int numUnhappyStudents = numStudents-cupcakes;
+    char firstLetter = 'C';
+    char lastLetter = 'T';
+    char favoriteLetter = 'x';
+    float maxValue = 10.5f;
+    float minValue = 3.2f;
+    float medianValue = 7.f;
+    double pie = 3.14;
+    double test = 7;
+    double fragment = 1.021653278;
+    bool isTrue = false;
+    bool isFalse = true;
+    bool passedTest = false;
     
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, numStudents, cupcakes, numUnhappyStudents, firstLetter, lastLetter, favoriteLetter, maxValue, minValue, medianValue, pie, test, fragment, isTrue, isFalse, passedTest); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -84,43 +106,80 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+int addNumbers(int a, int b)
+{
+    ignoreUnused(a, b);
+    return {};
+}
 /*
  2)
  */
-
+void performTask(char task = 'C')
+{
+    ignoreUnused(task);
+}
 /*
  3)
  */
-
+void startEngine(int keys, char car = 'T')
+{
+    ignoreUnused(keys, car);
+}
 /*
  4)
  */
-
+void stopEngine(bool isCarStarted)
+{
+    ignoreUnused(isCarStarted);
+}
 /*
  5)
  */
-
+char getNextChar(char character = 'A')
+{
+    ignoreUnused(character);
+    return {};
+}
 /*
  6)
  */
+void constructProperties(int width, int height, int length = 1)
+{
+    ignoreUnused(width, height, length);
+}
 
 /*
  7)
  */
+void catchWave(int height)
+{
+    ignoreUnused(height);
+}
 
 /*
  8)
  */
-
+bool isApocaplypseComing(int dangerLevel)
+{
+    ignoreUnused(dangerLevel);
+    return {};
+}
 /*
  9)
  */
-
+bool didPassTest(bool passedTest = false)
+{
+    ignoreUnused(passedTest);
+    return {};
+}
 /*
  10)
  */
-
+char getPreviousLetter(char character)
+{
+    ignoreUnused(character);  
+    return {};
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -141,27 +200,29 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
+    auto result = addNumbers(1, 2);
     
     //2)
-    
+    performTask('B');
     //3)
-    
+    startEngine(5);
     //4)
-    
+    stopEngine(true);
     //5)
-    
+    auto nextChar = getNextChar();
     //6)
-    
+    constructProperties(2, 3);
     //7)
-    
+    catchWave(10);
     //8)
-    
+    auto apacolypseComing = isApocaplypseComing(8);
     //9)
-    
+    auto passed = didPassTest();
     //10)
+    char prevChar = getPreviousLetter('B');
     
     
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, result, nextChar, apacolypseComing, passed, prevChar);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
