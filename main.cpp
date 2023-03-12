@@ -106,7 +106,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-int AddNumbers(int a, int b)
+int addNumbers(int a, int b)
 {
     ignoreUnused(a, b);
     return {};
@@ -159,7 +159,7 @@ void catchWave(int height)
 /*
  8)
  */
-bool isApacoplypseComing(int dangerLevel)
+bool isApocaplypseComing(int dangerLevel)
 {
     ignoreUnused(dangerLevel);
     return {};
